@@ -27,7 +27,7 @@ class _lunchInfo extends State<page_lunch>{
                      if (snapshot.hasData) {
                        return  Padding(
                          padding: const EdgeInsets.only(left: 16.0, top: 72.0),
-                         child: Text(snapshot.data.Content,
+                         child: Text((snapshot.data.Content == " ") ? "오늘은 급식이 없습니다." : snapshot.data.Content,
                          style : Theme.of(context).textTheme.title)
                        );
 
@@ -50,7 +50,7 @@ class _lunchInfo extends State<page_lunch>{
 
 
 Future<MealModel> FenchMeal(DateTime d) async {
-  String Scode = "B100000470";
+  String Scode = 'B100000470';
   var formatter = new DateFormat('yyyy.MM.dd');
   String formatted = formatter.format(d);
 

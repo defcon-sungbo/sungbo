@@ -5,6 +5,7 @@ class page_bus extends StatefulWidget{
 
   @override
   State<StatefulWidget> createState() => bus_info();
+  bool isSinlim = true;
 }
 
 class bus_info extends State<page_bus>{
@@ -15,6 +16,16 @@ class bus_info extends State<page_bus>{
       url: "https://www.google.com",
       appBar: new AppBar(
         title: new Text("bus"),
+        actions: <Widget>[
+          ButtonBar(
+            children: <Widget>[
+              GestureDetector(
+                child: Text(widget.isSinlim ? "난곡으로": "신림으로" ),
+                onTap: ()=>setState(() {widget.isSinlim= !widget.isSinlim;}),
+              )
+            ],
+          )
+        ],
       ),
     );
   }

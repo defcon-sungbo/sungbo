@@ -4,6 +4,7 @@ import 'package:sungbo/bus.dart';
 import 'package:sungbo/developer.dart';
 import 'package:sungbo/lunch.dart';
 import 'package:sungbo/page404.dart';
+import 'package:sungbo/posting.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 void main() => runApp(MyApp());
@@ -75,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
       case 4 :
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => page404()),
+          MaterialPageRoute(builder: (context) => PostingPage()),
         );
         break;
       case 5 :
